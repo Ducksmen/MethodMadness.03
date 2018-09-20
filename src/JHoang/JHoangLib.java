@@ -72,7 +72,7 @@ public class JHoangLib {
             fibCheck2 = fibCheck1 + fibCheck2; //Becomes the most recent fibonacci number//
             fibCheck1 = fibCheck3; //fibCheck1 becomes fibCheck3 which was previously fibCheck2 before it changed//
         }
-        return false;   
+        return false;
     }
     public static int stringUnion(String word1, String word2, String word3)
     {

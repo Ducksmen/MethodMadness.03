@@ -8,14 +8,14 @@ public class TestFile {
     {
         println("I love a cup of Java in the morning.");
 
-        println(cutOut("banana", "ana"));
+        println(cutOut("banana", "ana"));                     //cutOut//
 
-        System.out.println(isPalindrome("racecar"));
+        System.out.println(isPalindrome("racecar"));                //isPalindrome//
 
-        System.out.println(sumUpTo(10));
+        System.out.println(sumUpTo(10));                                //sumUpTo//
 
-        System.out.println(isFibonnaci(55));
+        System.out.println(isFibonnaci(55));                   //isFibonnaci//
 
-        System.out.println(stringUnion("hello", "hola", "nihao"));
+        System.out.println(stringUnion("hello", "hola", "nihao"));  //stringUnion//
     }
 }
