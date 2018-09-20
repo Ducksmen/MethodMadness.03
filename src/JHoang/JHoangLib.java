@@ -1,3 +1,5 @@
+//Jack Hoang 9/20/2019//
+
 package JHoang;
 
 public class JHoangLib {
@@ -7,6 +9,12 @@ public class JHoangLib {
         System.out.println(str);
     }
 
+    /**
+     * Deletes the first occurrence of a string from another string.
+     * @param mainStr The main string which we are deleting from.
+     * @param subStr The string that we delete in mainStr.
+     * @return Returns the cutoff string.
+     */
     public static String cutOut(String mainStr, String subStr)
     {
         int location = mainStr.indexOf(subStr);
@@ -26,7 +34,12 @@ public class JHoangLib {
         }
     }
 
-    public static Boolean isPalindrome(String word){
+    /**
+     * Checks to see if a word is a palindrome.
+     * @param word The word that we are checking.
+     * @return Returns whether or not word is a palindrome.
+     */
+    public static boolean isPalindrome(String word){
         String reverse = "";                                //What will eventually be compared to word.//
         for (int x = word.length() - 1; x >= 0; x--)        //Goes through the entire length of word.//
         {
@@ -42,6 +55,11 @@ public class JHoangLib {
         }
     }
 
+    /**
+     * Gives the total sum of 0 up to a number.
+     * @param upTo The number that we add up to.
+     * @return Returns the sum of 0 to upTo.
+     */
     public static int sumUpTo(int upTo)
     {
         int total = 0;                      //total is going to be what is returned.//
@@ -52,6 +70,11 @@ public class JHoangLib {
         return total;
     }
 
+    /**
+     * Checks if a number is a fibonnaci number or not.
+     * @param Integer The number that we are checking.
+     * @return Returns whether or not the number is a fibonnaci number.
+     */
     public static  boolean isFibonnaci(int Integer)
     {
         int fibCheck1 = 0;    //fibCheck1 will always be the previous number fibonacci number behind fibCheck2//
@@ -74,6 +97,14 @@ public class JHoangLib {
         }
         return false;
     }
+
+    /**
+     * Gives us the number of unique letters shared by at least two words.
+     * @param word1 The first word.
+     * @param word2 The second word.
+     * @param word3 The third word.
+     * @return Returns the number of unique letters shared by at least two words.
+     */
     public static int stringUnion(String word1, String word2, String word3)
     {
         int letShared = 0;                                 //Keeps track of how many letters are shared//
