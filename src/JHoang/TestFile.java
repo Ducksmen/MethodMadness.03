@@ -10,14 +10,13 @@ public class TestFile {
     {
         println("I love a cup of Java in the morning.");
 
-        println(cutOut("banana", "ana"));                     //cutOut//
+        println(cutOut("41235110015211", "11"));                     //cutOut//
 
-        System.out.println(isPalindrome("racecar"));                //isPalindrome//
+        System.out.println(isPalindrome("good"));                //isPalindrome//
 
         System.out.println(sumUpTo(10));                                //sumUpTo//
 
-        System.out.println(isFibonnaci(55));                   //isFibonnaci//
-
-        System.out.println(stringUnion("hello", "hola", "nihao"));  //stringUnion//
+        System.out.println(isFibonnaci(13));                   //isFibonnaci//
+        System.out.println(stringUnion("113apples", "113banasna", "cazt"));  //stringUnion//
     }
 }

@@ -17,20 +17,25 @@ public class JHoangLib {
      */
     public static String cutOut(String mainStr, String subStr)
     {
-        int location = mainStr.indexOf(subStr);
+        if (mainStr.contains(subStr)) {
+            int location = mainStr.indexOf(subStr);
+            {
+                if (location > 0)                                       // If the subStr is found in the the middle.//
+                {
+                    String partOne = mainStr.substring(0, location);     //Cuts mainStr into 2 parts and reconnects them.//
+                    String partTwo = mainStr.substring(location + subStr.length());
+                    String part = partOne + partTwo;
+                    return part;
+                } else                                             //If the subStr is found is in the beginning of mainStr.//
+                {
+                    String part = mainStr.substring(location + subStr.length());
+                    return part;
+                }
+            }
+        }
+        else
         {
-            if (location > 0)                                       // If the subStr is found in the the middle.//
-            {
-                String partOne = mainStr.substring(0, location);     //Cuts mainStr into 2 parts and reconnects them.//
-                String partTwo = mainStr.substring(location + 1);
-                String part = partOne + partTwo;
-                return part;
-            }
-            else                                             //If the subStr is found is in the beginning of mainStr.//
-            {
-                String part = mainStr.substring(location + 1);
-                return  part;
-            }
+            return mainStr;
         }
     }
 
@@ -134,9 +139,17 @@ public class JHoangLib {
         int xNum = 0;
         int yNum = 0;
         int zNum = 0;
-        for (int x = 0; x < word1.length() - 1; x++)   //Goes through the entire word//
-        {
-            if (word1.contains("a")) {                  //Checks for every single letter//
+        int zeroNum = 0;
+        int oneNum = 0;
+        int twoNum = 0;
+        int threeNum = 0;
+        int fourNum = 0;
+        int fiveNum = 0;
+        int sixNum = 0;
+        int sevenNum = 0;
+        int eightNum = 0;
+        int nineNum = 0;
+        if (word1.contains("a")) {                  //Checks for every single letter//
                 aNum++;                                 //If a letter is found (letter)Num goes up.//
             }
             if (word1.contains("b")) {
@@ -214,169 +227,254 @@ public class JHoangLib {
             if (word1.contains("z")) {
                 zNum++;
             }
-        }
-        for (int x = 0; x < word2.length() - 1; x++)
-        {
-            if (word1.contains("a")) {
+            if (word1.contains("0")) {
+                zeroNum++;
+            }
+            if (word1.contains("1")) {
+                oneNum++;
+            }
+            if (word1.contains("2")) {
+                twoNum++;
+            }
+            if (word1.contains("3")) {
+                threeNum++;
+            }
+            if (word1.contains("4")) {
+                fourNum++;
+            }
+            if (word1.contains("5")) {
+                fiveNum++;
+            }
+            if (word1.contains("6")) {
+                sixNum++;
+            }
+            if (word1.contains("7")) {
+                sevenNum++;
+            }
+            if (word1.contains("8")) {
+                eightNum++;
+            }
+            if (word1.contains("9")) {
+                nineNum++;
+            }
+
+            if (word2.contains("a")) {
                 aNum++;
             }
-            if (word1.contains("b")) {
+            if (word2.contains("b")) {
                 bNum++;
             }
-            if (word1.contains("c")) {
+            if (word2.contains("c")) {
                 cNum++;
             }
-            if (word1.contains("d")) {
+            if (word2.contains("d")) {
                 dNum++;
             }
-            if (word1.contains("e")) {
+            if (word2.contains("e")) {
                 eNum++;
             }
-            if (word1.contains("f")) {
+            if (word2.contains("f")) {
                 fNum++;
             }
-            if (word1.contains("g")) {
+            if (word2.contains("g")) {
                 gNum++;
             }
-            if (word1.contains("h")) {
+            if (word2.contains("h")) {
                 hNum++;
             }
-            if (word1.contains("i")) {
+            if (word2.contains("i")) {
                 iNum++;
             }
-            if (word1.contains("j")) {
+            if (word2.contains("j")) {
                 jNum++;
             }
-            if (word1.contains("k")) {
+            if (word2.contains("k")) {
                 kNum++;
             }
-            if (word1.contains("l")) {
+            if (word2.contains("l")) {
                 lNum++;
             }
-            if (word1.contains("m")) {
+            if (word2.contains("m")) {
                 mNum++;
             }
-            if (word1.contains("n")) {
+            if (word2.contains("n")) {
                 nNum++;
             }
-            if (word1.contains("o")) {
+            if (word2.contains("o")) {
                 oNum++;
             }
-            if (word1.contains("p")) {
+            if (word2.contains("p")) {
                 pNum++;
             }
-            if (word1.contains("q")) {
+            if (word2.contains("q")) {
                 qNum++;
             }
-            if (word1.contains("r")) {
+            if (word2.contains("r")) {
                 rNum++;
             }
-            if (word1.contains("s")) {
+            if (word2.contains("s")) {
                 sNum++;
             }
-            if (word1.contains("t")) {
+            if (word2.contains("t")) {
                 tNum++;
             }
-            if (word1.contains("u")) {
+            if (word2.contains("u")) {
                 uNum++;
             }
-            if (word1.contains("v")) {
+            if (word2.contains("v")) {
                 vNum++;
             }
-            if (word1.contains("w")) {
+            if (word2.contains("w")) {
                 wNum++;
             }
-            if (word1.contains("x")) {
+            if (word2.contains("x")) {
                 xNum++;
             }
-            if (word1.contains("y")) {
+            if (word2.contains("y")) {
                 yNum++;
             }
-            if (word1.contains("z")) {
+            if (word2.contains("z")) {
                 zNum++;
             }
-        }
-        for (int x = 0; x < word3.length() - 1; x++)
-        {
-            if (word1.contains("a")) {
+            if (word2.contains("0")) {
+                zeroNum++;
+            }
+            if (word2.contains("1")) {
+                oneNum++;
+            }
+            if (word2.contains("2")) {
+                twoNum++;
+            }
+            if (word2.contains("3")) {
+                threeNum++;
+            }
+            if (word2.contains("4")) {
+                fourNum++;
+            }
+            if (word2.contains("5")) {
+                fiveNum++;
+            }
+            if (word2.contains("6")) {
+                sixNum++;
+            }
+            if (word2.contains("7")) {
+                sevenNum++;
+            }
+            if (word2.contains("8")) {
+                eightNum++;
+            }
+            if (word2.contains("9")) {
+                nineNum++;
+            }
+
+            if (word3.contains("a")) {
                 aNum++;
             }
-            if (word1.contains("b")) {
+            if (word3.contains("b")) {
                 bNum++;
             }
-            if (word1.contains("c")) {
+            if (word3.contains("c")) {
                 cNum++;
             }
-            if (word1.contains("d")) {
+            if (word3.contains("d")) {
                 dNum++;
             }
-            if (word1.contains("e")) {
+            if (word3.contains("e")) {
                 eNum++;
             }
-            if (word1.contains("f")) {
+            if (word3.contains("f")) {
                 fNum++;
             }
-            if (word1.contains("g")) {
+            if (word3.contains("g")) {
                 gNum++;
             }
-            if (word1.contains("h")) {
+            if (word3.contains("h")) {
                 hNum++;
             }
-            if (word1.contains("i")) {
+            if (word3.contains("i")) {
                 iNum++;
             }
-            if (word1.contains("j")) {
+            if (word3.contains("j")) {
                 jNum++;
             }
-            if (word1.contains("k")) {
+            if (word3.contains("k")) {
                 kNum++;
             }
-            if (word1.contains("l")) {
+            if (word3.contains("l")) {
                 lNum++;
             }
-            if (word1.contains("m")) {
+            if (word3.contains("m")) {
                 mNum++;
             }
-            if (word1.contains("n")) {
+            if (word3.contains("n")) {
                 nNum++;
             }
-            if (word1.contains("o")) {
+            if (word3.contains("o")) {
                 oNum++;
             }
-            if (word1.contains("p")) {
+            if (word3.contains("p")) {
                 pNum++;
             }
-            if (word1.contains("q")) {
+            if (word3.contains("q")) {
                 qNum++;
             }
-            if (word1.contains("r")) {
+            if (word3.contains("r")) {
                 rNum++;
             }
-            if (word1.contains("s")) {
+            if (word3.contains("s")) {
                 sNum++;
             }
-            if (word1.contains("t")) {
+            if (word3.contains("t")) {
                 tNum++;
             }
-            if (word1.contains("u")) {
+            if (word3.contains("u")) {
                 uNum++;
             }
-            if (word1.contains("v")) {
+            if (word3.contains("v")) {
                 vNum++;
             }
-            if (word1.contains("w")) {
+            if (word3.contains("w")) {
                 wNum++;
             }
-            if (word1.contains("x")) {
+            if (word3.contains("x")) {
                 xNum++;
             }
-            if (word1.contains("y")) {
+            if (word3.contains("y")) {
                 yNum++;
             }
-            if (word1.contains("z")) {
+            if (word3.contains("z")) {
                 zNum++;
             }
-        }
+            if (word3.contains("0")) {
+                zeroNum++;
+            }
+            if (word3.contains("1")) {
+                oneNum++;
+            }
+            if (word3.contains("2")) {
+                twoNum++;
+            }
+            if (word3.contains("3")) {
+                threeNum++;
+            }
+            if (word3.contains("4")) {
+                fourNum++;
+            }
+            if (word3.contains("5")) {
+                fiveNum++;
+            }
+            if (word3.contains("6")) {
+                sixNum++;
+            }
+            if (word3.contains("7")) {
+                sevenNum++;
+            }
+            if (word3.contains("8")) {
+                eightNum++;
+            }
+            if (word3.contains("9")) {
+                nineNum++;
+            }
         if (aNum >= 2)     //If the letter has appeared at least 2 times in two different words letShared increases.//
         {
             letShared++;
@@ -478,6 +576,46 @@ public class JHoangLib {
             letShared++;
         }
         if (zNum >= 2)
+        {
+            letShared++;
+        }
+        if (zeroNum >= 2)
+        {
+            letShared++;
+        }
+        if (oneNum >= 2)
+        {
+            letShared++;
+        }
+        if (twoNum >= 2)
+        {
+            letShared++;
+        }
+        if (threeNum >= 2)
+        {
+            letShared++;
+        }
+        if (fourNum >= 2)
+        {
+            letShared++;
+        }
+        if (fiveNum >= 2)
+        {
+            letShared++;
+        }
+        if (sixNum >= 2)
+        {
+            letShared++;
+        }
+        if (sevenNum >= 2)
+        {
+            letShared++;
+        }
+        if (eightNum >= 2)
+        {
+            letShared++;
+        }
+        if (nineNum >= 2)
         {
             letShared++;
         }
